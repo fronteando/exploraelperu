@@ -1,0 +1,33 @@
+doctype html
+html(lang="es")
+	head
+		title Jade
+		link(rel="stylesheet", href="css/main.css")
+	body
+		h1 hola amed
+		.container
+			.box-full
+				- for(var i = 1 ; i <= 12 ; i++)
+					.box-1
+		.container
+			.box-full
+				- for(var i = 1 ; i <= 6 ; i++)
+					.box-2
+		.container
+			.box-full
+				- for(var i = 1 ; i <= 4 ; i++)
+					.box-3
+		.container
+			.box-full
+				- for(var i = 1 ; i <= 3 ; i++)
+					.box-4
+		.container
+			.box-full
+				- for(var i = 1 ; i <= 2 ; i++)
+					.box-5
+		.container
+			.box-full
+				- for(var i = 1 ; i <= 2 ; i++)
+					.box-6
+		
+		script(src="js/bundle.js")
