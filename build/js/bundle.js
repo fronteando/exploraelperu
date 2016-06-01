@@ -11033,7 +11033,8 @@ window.jQuery = $ = require('jquery')
  * Dependencies
  ***************************************/
 var developer = require('./vendor/dev')
-
+var validate = require('./vendor/validate')
+var carousel = require('./modules/carousel')
 
 
 
@@ -11042,11 +11043,115 @@ var developer = require('./vendor/dev')
  ***************************************/
 $(function() {
 	developer('web')
+	carousel()
 })
-},{"./vendor/dev":3,"jquery":1}],3:[function(require,module,exports){
+},{"./modules/carousel":3,"./vendor/dev":4,"./vendor/validate":5,"jquery":1}],3:[function(require,module,exports){
+var carousel = function() {
+	var owl = $('#tours-owl')
+
+	owl.owlCarousel({
+		items: 3,
+		loop:true,
+		margin: 22,
+		autoplay: true,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: true,
+		responsive:{
+			0:{
+				items:1
+			},
+			480:{
+				items:1
+			},
+			768:{
+				items:3
+			},
+			1200:{
+				items:3
+			}
+		}
+	})
+	$('.owl-next').click(function() {
+		owl.trigger('next.owl.carousel', [300]);
+	})
+	$('.owl-prev').click(function() {
+		owl.trigger('prev.owl.carousel', [300]);
+	})
+
+	var owlBlog = $('#blog-owl')
+
+	owlBlog.owlCarousel({
+		items: 4,
+		loop:true,
+		margin: 22,
+		autoplay: true,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: true,
+		responsive:{
+			0:{
+				items:1
+			},
+			480:{
+				items:1
+			},
+			768:{
+				items:3
+			},
+			1200:{
+				items:4
+			}
+		}
+	})
+	$('.owl-next').click(function() {
+		owlBlog.trigger('next.owl.carousel', [300]);
+	})
+	$('.owl-prev').click(function() {
+		owlBlog.trigger('prev.owl.carousel', [300]);
+	})
+}
+
+module.exports = carousel;
+},{}],4:[function(require,module,exports){
 var developer = function() {
   var name = 'jimmy' 
   console.log('funciona ' + name)
 }
 module.exports = developer;
+},{}],5:[function(require,module,exports){
+var validate = function() {
+	$('#contract').validate({
+		rules: {
+			name: {
+				required: true
+			},
+			mail: {
+				required: true
+			},
+			date: {
+				required: true
+			},
+			dni: {
+				required: true,
+				minlength: 8,
+				maxlength: 8
+			},
+			phone: {
+				required: true,
+				minlength: 9,
+				maxlength: 9
+			},
+			checkbox: {
+				required: true
+			}
+		},
+		errorPlacement: function() {
+			return false
+		},
+		submitHandler: function(form) {
+			console.log('enviar')
+		}
+	})
+}
+
+module.exports = validate;
 },{}]},{},[2]);

@@ -1,0 +1,22 @@
+.content
+	.box-full
+		.box-8
+			.box
+				h3.section-title
+					| Últimos 
+					span artículos
+				p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		.blog-owl#blog-owl
+			- for (var i = 1 ; i <= 5 ; i++)
+				article.blog-owl-article
+					.blog-owl-box
+						.blog-owl-img(style="background-image: url(images/banner/bg-1.png)")
+						.blog-owl-details
+							.blog-owl-details-center
+								.blog-owl-details-title
+									h4 Machu Picchu Tradicional #{i}
+									h5 04 Días / 03 Noches
+							.blog-owl-price
+								h3 S/. 300
+		.blog-link
+			a.blog-btn.btn.btn-red(href="#") IR A TODOS LOS ARTICULOS

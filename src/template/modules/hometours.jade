@@ -1,0 +1,20 @@
+.content
+	.box-full
+		.box-8
+			.box
+				h3.section-title
+					| Destinos 
+					span recomendados
+				p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+		.tours-owl#tours-owl
+			- for (var i = 1 ; i <= 5 ; i++)
+				a.tours-a(href="#" style="background-image: url(images/banner/bg-1.png)")
+					.tours-details
+						.tours-details-center
+							.tours-details-title
+								h4 Machu Picchu Tradicional #{i}
+								h5 04 Días / 03 Noches
+						.tours-price
+							h3 S/. 300
+		.tours-link
+			a.tours-btn.btn.btn-red(href="#") IR A TODOS LOS DESTINOS

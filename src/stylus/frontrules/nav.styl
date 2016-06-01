@@ -1,0 +1,105 @@
+.nav
+	height 60px
+	text-align center
+	a
+		cursor pointer
+	.content
+		display inline-block
+	&-header
+		float left
+	&-bar
+		float right
+		li
+			display inline-block
+	&-button
+		display none
+	&-ul
+		margin 0
+		padding 0
+		height 60px
+		li
+			height 100%
+			a
+				display table
+				height 100%
+				span
+					display table-cell
+					vertical-align middle
+	&-link
+		display inline-block
+		vertical-align top
+		height 100%
+		ul
+			display table
+			height 100%
+			padding 0
+			li
+				display table-cell
+				vertical-align middle
+				a
+					height auto
+	&-brand
+		width 125px
+		height 100%
+		padding-left 10px
+	&-center
+		display table
+		width 100%
+		height 60px
+	&-img
+		display table-cell
+		vertical-align middle
+		a
+			display block
+			margin-bottom -5px
+	@media screen and (max-width 800px)
+		&-header
+			width 100%
+		&-button
+			float right
+			padding-right 10px
+			display block
+		&-btn
+			display table-cell
+			vertical-align middle
+			.btn
+				&-square
+					width 40px
+					height 40px
+					text-decoration none
+					display block
+					.ico
+						display table
+						width 100%
+						height 100%
+						vertical-align middle
+						font-size 20px
+						&:before
+							display table-cell
+							vertical-align middle
+				&-circle
+					width 40px
+					height 40px
+					text-decoration none
+					display block
+					border-radius 50%
+					.ico
+						display table
+						width 100%
+						height 100%
+						vertical-align middle
+						font-size 20px
+						h4
+							display table-cell
+							vertical-align middle
+							text-transform uppercase
+							font-size .7em
+		&-brand
+			float left
+			width 110px
+			height 100%
+			padding-left 10px
+		&-toggle
+			width 20%
+		&-bar
+			display none

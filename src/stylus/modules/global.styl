@@ -1,0 +1,90 @@
+body
+	font-family Roboto
+	color $gray
+a
+	color $white
+	text-decoration none
+p
+	font-weight 300
+	margin 0
+	
+.section
+	&-row
+		padding 50px 0
+	&-title
+		font-family bebasM
+		margin 0
+		font-size 2.5em
+		span
+			font-family bebasB
+			
+
+/*
+ * id section
+ */
+#destiny
+	background-color $gray-light
+#peruvian
+	.box-4
+		vertical-align middle
+		&:first-child
+			text-align left
+
+/*
+ * social
+ */
+.social
+	&-ul
+		padding 0
+		margin 0
+		display inline-block
+		&:hover
+			li
+				opacity 0.5
+		li
+			list-style none
+			display inline-block
+			margin-right 2px
+			opacity 1
+			transition all .3s ease
+			&:hover
+				opacity 1
+	&-a
+		width 40px
+		height 40px
+		display table
+		border-radius 50%
+		&.facebook
+			background-color $facebook
+		&.twitter
+			background-color $twitter
+		&.youtube
+			background-color $youtube
+		&.instagram
+			background-color $instagram
+		&.tripadvisor
+			background-color $tripadvisor
+		.ico
+			font-size 1em
+			color $white
+			display table-cell
+			vertical-align middle
+
+/*
+ * btn
+ */
+.btn
+	display inline-block
+	text-align center
+	&-red
+		background-color $red
+		color $white
+		padding 15px 30px
+		border-radius 30px
+		transition all .3s ease
+		&:hover,
+		&:active,
+		&:focus
+			background-color $black
+
+
