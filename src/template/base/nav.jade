@@ -5,39 +5,51 @@ nav.nav
 			.nav-brand#nav-brand
 				.nav-center
 					.nav-img
-						a(href="#")
+						a(href="/")
 							img(src='images/logo.svg')
 			.nav-button
 				.nav-center
 					.nav-btn
-						a(href="#" class="btn-square")
+						a(class="btn-square show" id="openNab")
 							span(class="ico ico-isotipo")
 			.nav-button
 				.nav-center
 					.nav-btn
-						a(href="#" class="btn-circle")
+						a.lenguage-select(class="btn-circle")
 							span(class="ico")
 								h4 Esp.
 		//- menú listado
 		div.nav-bar#nav-bar
 			ul.nav-ul
 				li
-					a(class="homer" href="#")
+					a(class="homer" href="/destinos.html")
 						span.fa.fa-home Destinos
 				li
-					a(href="#")
+					a(href="/formasdepagos.html")
 						span.fa.fa-user Medios de pago
 				li
 					a(href="#")
 						span.fa.fa-user Conócenos
 				li
-					a(href="#")
+					a(href="/blog.html")
 						span.fa.fa-user Blog
-				li
-					a(href="#")
-						span.fa.fa-user Contáctanos
 				.nav-link
 					ul
 						li
 							a(href="#")
-								span.fa.fa-user Reserva ahora
+								span.fa.fa-user Contáctanos
+						li
+							a.lenguage-select
+								span.fa.fa-user Esp.
+		//- menú idioma
+		div.lenguage-nav
+			ul.lenguage-ul
+				li
+					a(href="#")
+						span.fa.fa-user Español
+				li
+					a(href="#")
+						span.fa.fa-user English
+				li
+					a(href="#")
+						span.fa.fa-user Português

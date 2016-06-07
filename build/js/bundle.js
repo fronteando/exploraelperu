@@ -11033,8 +11033,10 @@ window.jQuery = $ = require('jquery')
  * Dependencies
  ***************************************/
 var developer = require('./vendor/dev')
+var frontrules = require('./vendor/frontrules')
 var validate = require('./vendor/validate')
 var carousel = require('./modules/carousel')
+var slider = require('./modules/slider')
 
 
 
@@ -11044,8 +11046,22 @@ var carousel = require('./modules/carousel')
 $(function() {
 	developer('web')
 	carousel()
+	slider()
+	frontrules()
+
+	/**
+	 * Banner section
+	 */
+	$('.tp-banner').revolution({
+		delay:5000,
+		startwidth:1170,
+		startwidth:400,
+		hideThumbs:10,
+		touchenabled:"on",
+		onHoverStop:"off"
+	});
 })
-},{"./modules/carousel":3,"./vendor/dev":4,"./vendor/validate":5,"jquery":1}],3:[function(require,module,exports){
+},{"./modules/carousel":3,"./modules/slider":4,"./vendor/dev":5,"./vendor/frontrules":6,"./vendor/validate":7,"jquery":1}],3:[function(require,module,exports){
 var carousel = function() {
 	var owl = $('#tours-owl')
 
@@ -11060,8 +11076,8 @@ var carousel = function() {
 			0:{
 				items:1
 			},
-			480:{
-				items:1
+			500:{
+				items:2
 			},
 			768:{
 				items:3
@@ -11078,6 +11094,37 @@ var carousel = function() {
 		owl.trigger('prev.owl.carousel', [300]);
 	})
 
+	var owlToursOf = $('#toursofert-owl')
+
+	owlToursOf.owlCarousel({
+		items: 4,
+		loop:true,
+		margin: 22,
+		autoplay: true,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: true,
+		responsive:{
+			0:{
+				items:1
+			},
+			500:{
+				items:2
+			},
+			768:{
+				items:3
+			},
+			1200:{
+				items:4
+			}
+		}
+	})
+	$('.owl-next').click(function() {
+		owlToursOf.trigger('next.owl.carousel', [300]);
+	})
+	$('.owl-prev').click(function() {
+		owlToursOf.trigger('prev.owl.carousel', [300]);
+	})
+
 	var owlBlog = $('#blog-owl')
 
 	owlBlog.owlCarousel({
@@ -11091,8 +11138,8 @@ var carousel = function() {
 			0:{
 				items:1
 			},
-			480:{
-				items:1
+			500:{
+				items:2
 			},
 			768:{
 				items:3
@@ -11112,12 +11159,69 @@ var carousel = function() {
 
 module.exports = carousel;
 },{}],4:[function(require,module,exports){
+var slider = function() {
+	$('.toursin-gallery').flexslider({
+		animation: "slide",
+		controlNav: true,
+		directionNav: true,
+		smoothHeight: true
+	});
+}
+
+module.exports = slider;
+},{}],5:[function(require,module,exports){
 var developer = function() {
   var name = 'jimmy' 
   console.log('funciona ' + name)
 }
 module.exports = developer;
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
+var frontrules = function() {
+	var navBar = $('#nav-bar')
+	var navLen = $('.lenguage-nav')
+
+	$('#openNab').on('click', function(){
+		if($(this).hasClass('show')){
+			navBar.animate({
+				top: "+=330",
+				opacity: "1"
+			}, 500, function() {
+				// Animation complete.
+			});
+			$(this).html('<span class="ico ico-isotipo"></span>').removeClass('show').addClass('hide');
+		} else {   	
+			navBar.animate({
+				top: "-=330",
+				opacity: "0"
+			}, 500, function() {
+				// Animation complete.
+			});
+			$(this).html('<span class="ico ico-isotipo"></span>').removeClass('hide').addClass('show');    
+		}
+	});
+
+	$('.lenguage-select').on('click', function(){
+		if($(this).hasClass('show')){
+			navLen.animate({
+				height: "-=125",
+				opacity: "0"
+			}, 500, function() {
+				// Animation complete.
+			});
+			$(this).removeClass('show').addClass('hide');
+		} else {   	
+			navLen.animate({
+				height: "+=125",
+				opacity: "1"
+			}, 500, function() {
+				// Animation complete.
+			});
+			$(this).removeClass('hide').addClass('show');    
+		}
+	});
+}
+module.exports = frontrules;
+},{}],7:[function(require,module,exports){
 var validate = function() {
 	$('#contract').validate({
 		rules: {

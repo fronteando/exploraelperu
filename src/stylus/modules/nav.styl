@@ -1,6 +1,11 @@
 .nav
 	background-color rgba($red-dark,.8)
 	color $white
+	position fixed
+	z-index 21
+	width 100%
+	top 0
+	left 0
 	&-ul
 		> li
 			a
@@ -27,13 +32,51 @@
 					padding 10px 20px
 					border-radius 20px
 					transition all .3s ease-in-out
+					margin-right 10px
 					&:hover,
 					&:focus,
 					&:active
 						background-color $white
 						color $red
+				&:last-child
+					a
+						padding 0
+						width 40px
+						height 40px
+						background-color transparent
+						border 2px solid $red
+						color $white
+						margin-right 0
+						transition all .3s ease-in-out
+						border-radius 50%
+						text-transform uppercase
+						font-size .85em
+						&:hover,
+						&:focus,
+						&:active
+							background-color $white
+							border-color $white
+							color $red
 	@media screen and (max-width 800px)
-		background-color rgba($red-dark,1)
+		background-color transparent
+		z-index 101
+		.content
+			display block
+		&-header
+			background-color rgba($red-dark, 1)
+		&-ul
+			background-color rgba($red-alter, .9)
+			> li
+				border-bottom 1px solid rgba($white,.1)
+				display block
+				a
+					padding 15px 10px
+					&:hover,
+					&:active,
+					&:focus
+						background-color rgba($black,.7)
+						&:before
+							content initial
 		&-btn
 			.btn
 				&-square
@@ -47,3 +90,50 @@
 					border-radius 50%
 					h4
 						color $red-dark
+		&-link
+			margin 10px 0
+			ul
+				li
+					a
+						margin-right 0
+					&:last-child
+						a
+							display none
+.lenguage
+	&-nav
+		position absolute
+		right 15px
+		top 60px
+		background-color $white
+		border-radius 0 0 10px 10px
+		min-width 180px
+		overflow hidden
+		opacity 0
+		height 1px
+	&-ul
+		padding 0
+		margin 0
+		li
+			list-style none
+			border-bottom 1px solid rgba($black,.06)
+			a
+				color $gray
+				padding 10px 20px
+				display block
+				transition all .3s ease-in-out
+				&:hover,
+				&:focus,
+				&:active
+					background-color rgba($gray,.2)
+			&:last-child
+				border-bottom 0
+	@media screen and (max-width 800px)
+		&-nav
+			width 100%
+			right 0
+			border-radius 0
+			background-color rgba($white, .9)
+
+
+
+

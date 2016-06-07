@@ -1,6 +1,7 @@
 body
 	font-family Roboto
 	color $gray
+	font-weight 300
 a
 	color $white
 	text-decoration none
@@ -11,6 +12,9 @@ p
 .section
 	&-row
 		padding 50px 0
+	@media screen and (max-width 800px)
+		&-row
+			padding 50px 15px
 	&-title
 		font-family bebasM
 		margin 0
@@ -22,7 +26,7 @@ p
 /*
  * id section
  */
-#destiny
+#destinyall
 	background-color $gray-light
 #peruvian
 	.box-4
@@ -47,6 +51,7 @@ p
 			margin-right 2px
 			opacity 1
 			transition all .3s ease
+			vertical-align middle
 			&:hover
 				opacity 1
 	&-a
@@ -54,6 +59,7 @@ p
 		height 40px
 		display table
 		border-radius 50%
+		text-align center
 		&.facebook
 			background-color $facebook
 		&.twitter
@@ -86,5 +92,24 @@ p
 		&:active,
 		&:focus
 			background-color $black
-
-
+	&-gray
+		background-color $gray
+		color $white
+		padding 5px 15px
+		border-radius 20px
+		transition all .3s ease
+		&:hover,
+		&:active,
+		&:focus
+			background-color $black
+			
+@media screen and (max-width 800px)
+	.peru-logo
+		display none
+	#peruvian
+		h3
+			text-align center
+		p
+			text-align center
+	.footer-skype
+		margin-bottom 5px

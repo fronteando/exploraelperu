@@ -1,0 +1,28 @@
+section.widget-section.widget-red
+	h3
+		| Destinos destacados
+	- for (var i = 1 ; i <= 3 ; i++)
+		article.newslatter-article
+			.box-top
+				.box-4
+					.newslatter-img
+						figure.newslatter-figure
+							img(src="images/destinos/destino#{i}.png" class="img-responsive")
+				.box-8
+					.newslatter-summary
+						a(href="/destinosin.html") Conoce como viajar a Cusco y sobrivir para contarlo #{i}
+						h6 02 días / 01 noche
+section.widget-section
+	h3
+		| Artículos destacados
+	- for (var i = 1 ; i <= 3 ; i++)
+		article.newslatter-article
+			.box-top
+				.box-4
+					.newslatter-img
+						figure.newslatter-figure
+							img(src="images/destinos/destino#{i}.png" class="img-responsive")
+				.box-8
+					.newslatter-summary
+						a(href="/blogin.html") Conoce como viajar a Cusco y sobrivir para contarlo #{i}
+						h6 07/06/16

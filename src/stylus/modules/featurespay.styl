@@ -1,0 +1,65 @@
+.featurespay
+	&-article
+		border-bottom 1px solid rgba($black,.1)
+		overflow hidden
+		padding-bottom 25px
+		margin-bottom 25px
+		&:last-child
+			margin-bottom 0
+			border-bottom 0
+			padding-bottom 0
+	&-img
+		height 150px
+	&-figure
+		height 100%
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+		border-radius 10px
+		border 1px solid
+		max-width 195px
+		margin 0 auto
+		&-wu
+			background-color $black
+			border-color $black
+		&-pp
+			background-color $white
+			border-color rgba($gray,.2)
+		&-bc
+			background-color #003b7d
+			border-color #003b7d
+	&-text
+		padding-left 25px
+		h5
+			text-transform uppercase
+			font-family RobotoC
+			margin-top 1em
+			font-size 1em
+		h3
+			text-transform uppercase
+			font-family RobotoC
+		p
+			text-align justify
+			a
+				color $red
+				font-weight 400
+				text-decoration underline
+				&:hover,
+				&:active,
+				&:focus
+					color $black
+			span
+				font-weight 400
+				text-decoration underline
+		ul
+			padding-left 20px
+		li
+			span
+				font-weight 400
+				text-decoration underline
+	@media screen and (max-width 800px)
+		&-text
+			padding-left 0
+			margin-top 25px
+			h3
+				text-align center

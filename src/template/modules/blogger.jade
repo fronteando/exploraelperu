@@ -1,0 +1,14 @@
+.content
+	.box-top
+		.box-8
+			.blogger
+				- for (var i = 1 ; i <= 7 ; i++)
+					article.blogger-article
+						.blogger-figure(style="background-image: url('images/destinos/destino3.png')")
+						.blogger-details
+							h4 Machu Picchu Tradicional #{i}
+							p Machu picchu el destino obligatorio que conocera en su Tour a Peru, esta Fortaleza Inca tiene mas de 100 años de creacion...
+							a.blogger-btn.btn.btn-red(href="/blogin.html") Ver mas
+		.box-4
+			.widget
+				include newslatter

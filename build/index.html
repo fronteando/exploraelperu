@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" content="text/html;" http-equiv="content-type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="Descripción de la página. Longitud máxima 155">
     <meta name="twitter:card" content="summary">
@@ -18,7 +19,13 @@
     <meta property="og:site_name" content="Oropensando">
     <meta property="og:locale" content="es_ES">
     <meta property="fb:admins" content="Facebook ID">
+    <!-- For IE 9 and below. ICO should be 32x32 pixels in size--><!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+    <!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size-->
+    <link rel="apple-touch-icon-precomposed" href="/favicon.ico">
+    <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size-->
+    <link rel="icon" href="/favicon.ico">
     <title>Explora el Peru</title>
+    <link rel="stylesheet" href="css/vendor/revolution.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
 </html>
@@ -30,49 +37,76 @@
           <div class="nav-header">
             <div id="nav-brand" class="nav-brand">
               <div class="nav-center">
-                <div class="nav-img"><a href="#"><img src="images/logo.svg"></a></div>
+                <div class="nav-img"><a href="/"><img src="images/logo.svg"></a></div>
               </div>
             </div>
             <div class="nav-button">
               <div class="nav-center">
-                <div class="nav-btn"><a href="#" class="btn-square"><span class="ico ico-isotipo"></span></a></div>
+                <div class="nav-btn"><a id="openNab" class="btn-square show"><span class="ico ico-isotipo"></span></a></div>
               </div>
             </div>
             <div class="nav-button">
               <div class="nav-center">
-                <div class="nav-btn"><a href="#" class="btn-circle"><span class="ico">
+                <div class="nav-btn"><a class="lenguage-select btn-circle"><span class="ico">
                       <h4>Esp.</h4></span></a></div>
               </div>
             </div>
           </div>
           <div id="nav-bar" class="nav-bar">
             <ul class="nav-ul">
-              <li><a href="#" class="homer"><span class="fa fa-home">Destinos</span></a></li>
-              <li><a href="#"><span class="fa fa-user">Medios de pago</span></a></li>
+              <li><a href="/destinos.html" class="homer"><span class="fa fa-home">Destinos</span></a></li>
+              <li><a href="/formasdepagos.html"><span class="fa fa-user">Medios de pago</span></a></li>
               <li><a href="#"><span class="fa fa-user">Conócenos</span></a></li>
-              <li><a href="#"><span class="fa fa-user">Blog</span></a></li>
-              <li><a href="#"><span class="fa fa-user">Contáctanos</span></a></li>
+              <li><a href="/blog.html"><span class="fa fa-user">Blog</span></a></li>
               <div class="nav-link">
                 <ul>
-                  <li><a href="#"><span class="fa fa-user">Reserva ahora</span></a></li>
+                  <li><a href="#"><span class="fa fa-user">Contáctanos</span></a></li>
+                  <li><a class="lenguage-select"><span class="fa fa-user">Esp.</span></a></li>
                 </ul>
               </div>
             </ul>
           </div>
+          <div class="lenguage-nav">
+            <ul class="lenguage-ul">
+              <li><a href="#"><span class="fa fa-user">Español</span></a></li>
+              <li><a href="#"><span class="fa fa-user">English</span></a></li>
+              <li><a href="#"><span class="fa fa-user">Português</span></a></li>
+            </ul>
+          </div>
         </div>
       </nav>
+      <div class="tp-banner">
+        <ul>
+          <!-- SLIDE-->
+          <li data-transition="fade" data-slotamount="5" data-masterspeed="700">
+            <!-- MAIN IMAGE--><img src="images/banner/banner-1.jpg" style="background-color:#b68954" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+          </li>
+          <!-- SLIDE-->
+          <li data-transition="fade" data-slotamount="5" data-masterspeed="700">
+            <!-- MAIN IMAGE--><img src="images/banner/banner-2.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+          </li>
+          <!-- SLIDE-->
+          <li data-transition="fade" data-slotamount="5" data-masterspeed="700">
+            <!-- MAIN IMAGE--><img src="images/banner/banner-3.jpg" style="background-color:#f26124" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+            <!-- LAYERS-->
+            <!-- LAYER NR. 5-->
+            <div data-x="104" data-y="154" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="800" data-start="800" data-easing="Power4.easeOut" data-endspeed="300" data-endeasing="Power1.easeIn" data-captionhidden="on" style="z-index: 6" class="tp-caption large_bold_white_25 headline skewfromleft customout">"La Felicidad es la máxima sastifacción"<span>Da vinci</span></div>
+          </li>
+        </ul>
+        <!-- <div class="tp-bannertimer"></div>-->
+      </div>
     </div>
   </header>
   <section id="peruvian" class="section-row">
     <div class="content">
-      <div class="box-full box-middle">
+      <div class="box-full">
         <div class="box-4">
           <div class="box">
             <h3 class="section-title">¿Porque venir <span>a Perú?</span></h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
           </div>
         </div>
-        <div class="box-4">
+        <div class="box-4 peru-logo">
           <div class="box">
             <figure class="img-center"><img src="images/global/logo-gray.png" class="img-responsive"></figure>
           </div>
@@ -80,7 +114,7 @@
       </div>
     </div>
   </section>
-  <section id="destiny" class="section-row">
+  <section id="destinyall" class="section-row">
     <div class="content">
       <div class="box-full">
         <div class="box-8">
@@ -89,7 +123,7 @@
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
           </div>
         </div>
-        <div id="tours-owl" class="tours-owl"><a href="#" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
+        <div id="tours-owl" class="tours-owl"><a href="/destinosin.html" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
             <div class="tours-details">
               <div class="tours-details-center">
                 <div class="tours-details-title">
@@ -100,7 +134,7 @@
               <div class="tours-price">
                 <h3>S/. 300</h3>
               </div>
-            </div></a><a href="#" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
+            </div></a><a href="/destinosin.html" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
             <div class="tours-details">
               <div class="tours-details-center">
                 <div class="tours-details-title">
@@ -111,7 +145,7 @@
               <div class="tours-price">
                 <h3>S/. 300</h3>
               </div>
-            </div></a><a href="#" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
+            </div></a><a href="/destinosin.html" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
             <div class="tours-details">
               <div class="tours-details-center">
                 <div class="tours-details-title">
@@ -122,7 +156,7 @@
               <div class="tours-price">
                 <h3>S/. 300</h3>
               </div>
-            </div></a><a href="#" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
+            </div></a><a href="/destinosin.html" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
             <div class="tours-details">
               <div class="tours-details-center">
                 <div class="tours-details-title">
@@ -133,7 +167,7 @@
               <div class="tours-price">
                 <h3>S/. 300</h3>
               </div>
-            </div></a><a href="#" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
+            </div></a><a href="/destinosin.html" style="background-image: url(images/banner/bg-1.png)" class="tours-a">
             <div class="tours-details">
               <div class="tours-details-center">
                 <div class="tours-details-title">
@@ -146,7 +180,7 @@
               </div>
             </div></a>
         </div>
-        <div class="tours-link"><a href="#" class="tours-btn btn btn-red">IR A TODOS LOS DESTINOS</a></div>
+        <div class="tours-link"><a href="/destinos.html" class="tours-btn btn btn-red">IR A TODOS LOS DESTINOS</a></div>
       </div>
     </div>
   </section>
@@ -166,13 +200,17 @@
               <div class="blog-owl-details">
                 <div class="blog-owl-details-center">
                   <div class="blog-owl-details-title">
-                    <h4>Machu Picchu Tradicional 1</h4>
-                    <h5>04 Días / 03 Noches</h5>
+                    <h4>¡Cusco! Ciudad en las nubes 1</h4>
+                    <h5>
+                       
+                      16/04/2016 - <span>AMED CHAVEZ</span>
+                    </h5>
                   </div>
                 </div>
-                <div class="blog-owl-price">
-                  <h3>S/. 300</h3>
+                <div class="blog-owl-text">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore…</p>
                 </div>
+                <div class="blog-owl-button"><a href="#" class="blog-btn btn btn-gray">Leer más</a></div>
               </div>
             </div>
           </article>
@@ -182,13 +220,17 @@
               <div class="blog-owl-details">
                 <div class="blog-owl-details-center">
                   <div class="blog-owl-details-title">
-                    <h4>Machu Picchu Tradicional 2</h4>
-                    <h5>04 Días / 03 Noches</h5>
+                    <h4>¡Cusco! Ciudad en las nubes 2</h4>
+                    <h5>
+                       
+                      16/04/2016 - <span>AMED CHAVEZ</span>
+                    </h5>
                   </div>
                 </div>
-                <div class="blog-owl-price">
-                  <h3>S/. 300</h3>
+                <div class="blog-owl-text">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore…</p>
                 </div>
+                <div class="blog-owl-button"><a href="#" class="blog-btn btn btn-gray">Leer más</a></div>
               </div>
             </div>
           </article>
@@ -198,13 +240,17 @@
               <div class="blog-owl-details">
                 <div class="blog-owl-details-center">
                   <div class="blog-owl-details-title">
-                    <h4>Machu Picchu Tradicional 3</h4>
-                    <h5>04 Días / 03 Noches</h5>
+                    <h4>¡Cusco! Ciudad en las nubes 3</h4>
+                    <h5>
+                       
+                      16/04/2016 - <span>AMED CHAVEZ</span>
+                    </h5>
                   </div>
                 </div>
-                <div class="blog-owl-price">
-                  <h3>S/. 300</h3>
+                <div class="blog-owl-text">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore…</p>
                 </div>
+                <div class="blog-owl-button"><a href="#" class="blog-btn btn btn-gray">Leer más</a></div>
               </div>
             </div>
           </article>
@@ -214,13 +260,17 @@
               <div class="blog-owl-details">
                 <div class="blog-owl-details-center">
                   <div class="blog-owl-details-title">
-                    <h4>Machu Picchu Tradicional 4</h4>
-                    <h5>04 Días / 03 Noches</h5>
+                    <h4>¡Cusco! Ciudad en las nubes 4</h4>
+                    <h5>
+                       
+                      16/04/2016 - <span>AMED CHAVEZ</span>
+                    </h5>
                   </div>
                 </div>
-                <div class="blog-owl-price">
-                  <h3>S/. 300</h3>
+                <div class="blog-owl-text">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore…</p>
                 </div>
+                <div class="blog-owl-button"><a href="#" class="blog-btn btn btn-gray">Leer más</a></div>
               </div>
             </div>
           </article>
@@ -230,13 +280,17 @@
               <div class="blog-owl-details">
                 <div class="blog-owl-details-center">
                   <div class="blog-owl-details-title">
-                    <h4>Machu Picchu Tradicional 5</h4>
-                    <h5>04 Días / 03 Noches</h5>
+                    <h4>¡Cusco! Ciudad en las nubes 5</h4>
+                    <h5>
+                       
+                      16/04/2016 - <span>AMED CHAVEZ</span>
+                    </h5>
                   </div>
                 </div>
-                <div class="blog-owl-price">
-                  <h3>S/. 300</h3>
+                <div class="blog-owl-text">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore…</p>
                 </div>
+                <div class="blog-owl-button"><a href="#" class="blog-btn btn btn-gray">Leer más</a></div>
               </div>
             </div>
           </article>
@@ -257,7 +311,7 @@
     <section class="footer-top">
       <div class="content">
         <div class="box-middle">
-          <div class="box-5">
+          <div class="box-6 firm-logo">
             <div class="firm">
               <figure class="firm-img"><img src="images/global/firma.png" class="img-responsive"></figure>
               <div class="firm-text">
@@ -266,8 +320,34 @@
               </div>
             </div>
           </div>
-          <div class="box-7">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi inventore eaque quo laboriosam perspiciatis magni eum a quam sint aut alias ullam, aperiam saepe natus deleniti delectus voluptates, quia libero!</p>
+          <div class="box-6">
+            <div class="box-6">
+              <div class="footer-contact">
+                <ul class="footer-contact-ul">
+                  <li>
+                    <h5><span class="footer-mail"><a href="mailto:info@exploraelperu.com">info@exploraelperu.com</a></span></h5>
+                  </li>
+                  <li>
+                    <h5><span class="footer-WhatsApp">+51 983 808669</span></h5>
+                  </li>
+                  <li>
+                    <h5><span class="footer-skype">ViajesTierraViva</span></h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="box-6">
+              <div class="footer-contact">
+                <ul class="footer-contact-ul">
+                  <li>
+                    <h5><span class="footer-phone">+51 084 228683 / +51 956774430</span></h5>
+                  </li>
+                  <li>
+                    <h5><span class="footer-market">Portal Confituria Nro 257 - Plaza de Armas Cusco - Perú</span></h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -277,11 +357,11 @@
         <div class="box-full">
           <div class="social">
             <ul class="social-ul">
-              <li><a href="#" class="social-a facebook"><span class="ico ico-facebook"></span></a></li>
-              <li><a href="#" class="social-a twitter"><span class="ico ico-twitter"></span></a></li>
-              <li><a href="#" class="social-a youtube"><span class="ico ico-youtube"></span></a></li>
-              <li><a href="#" class="social-a instagram"><span class="ico ico-instagram"></span></a></li>
-              <li><a href="#" class="social-a tripadvisor"><span class="ico ico-tripadvisor"></span></a></li>
+              <li><a href="http://www.facebook.com" target="_blank" class="social-a facebook"><span class="ico ico-facebook"></span></a></li>
+              <li><a href="http://www.twitter.com" target="_blank" class="social-a twitter"><span class="ico ico-twitter"></span></a></li>
+              <li><a href="http://www.youtube.com" target="_blank" class="social-a youtube"><span class="ico ico-youtube"></span></a></li>
+              <li><a href="http://www.instagram.com" target="_blank" class="social-a instagram"><span class="ico ico-instagram"></span></a></li>
+              <li><a href="http://www.tripadvisor.com" target="_blank" class="social-a tripadvisor"><span class="ico ico-tripadvisor"></span></a></li>
             </ul>
           </div>
         </div>
@@ -289,5 +369,8 @@
     </section>
     <script src="js/bundle.js"></script>
     <script src="js/vendor/owl.carousel.min.js"></script>
+    <script src="js/vendor/jquery.flexslider.js"></script>
+    <script src="js/vendor/jquery.themepunch.plugins.min.js"></script>
+    <script src="js/vendor/jquery.themepunch.revolution.min.js"></script>
   </footer>
 </body>

@@ -6,21 +6,61 @@
 		text-align center
 		width 100%
 	@media screen and (max-width 1200px)
-		width 920px
+		width 905px
 	@media screen and (max-width 950px)
-		width 770px
+		width 755px
 	@media screen and (max-width 800px)
 		width 100%
 		padding 0
 
-.box-middle
+.box-middle >
 	display table
+	width 100%
 	.box
+		&-9,
+		&-8,
 		&-7,
 		&-6,
-		&-5
+		&-5,
+		&-4,
+		&-3
 			display table-cell
 			vertical-align middle
+	@media screen and (max-width 800px)
+		.box
+			&-9,
+			&-8,
+			&-7,
+			&-6,
+			&-5,
+			&-4,
+			&-3
+				display table
+				width 100%
+.box-top >
+	display table
+	width 100%
+	.box
+		&-9,
+		&-8,
+		&-7,
+		&-6,
+		&-5,
+		&-4,
+		&-3
+			display table-cell
+			vertical-align top
+	@media screen and (max-width 800px)
+		.box
+			&-9,
+			&-8,
+			&-7,
+			&-6,
+			&-5,
+			&-4,
+			&-3
+				display table
+				width 100%
 .box
 	&-12,
 	&-8,
@@ -53,3 +93,12 @@
 		width 16.69%
 	&-1
 		width 8.32%
+	@media screen and (max-width 800px)
+		&-9,
+		&-8,
+		&-7,
+		&-6,
+		&-5,
+		&-4,
+		&-3
+			width 100%

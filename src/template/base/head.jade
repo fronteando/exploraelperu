@@ -2,6 +2,7 @@ doctype html
 html(lang="es")
 	head
 		meta(charset="UTF-8" content="text/html;" http-equiv="content-type")
+		meta(content="IE=edge" http-equiv="X-UA-Compatible")
 		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
 		meta(name="description" content="Descripción de la página. Longitud máxima 155")
 
@@ -23,5 +24,17 @@ html(lang="es")
 		meta(property="og:locale" content="es_ES")
 		meta(property="fb:admins" content="Facebook ID")
 
+		//- favicon
+		// For IE 9 and below. ICO should be 32x32 pixels in size
+		<!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+
+		// Touch Icons - iOS and Android 2.1+ 180x180 pixels in size
+		link(rel="apple-touch-icon-precomposed" href="/favicon.ico")
+
+		// Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size
+		link(rel="icon" href="/favicon.ico")
+
 		title Explora el Peru
+		//- Revolution Slider
+		link(rel="stylesheet", href="css/vendor/revolution.css")
 		link(rel="stylesheet", href="css/main.css")

@@ -1,0 +1,74 @@
+.newslatter
+	&-article
+		margin-bottom 15px
+		color #4b525c
+		border-bottom 1px solid rgba($gray-line,.2)
+		padding-bottom 10px
+		margin-bottom 10px
+		&:last-child
+			margin-bottom 0
+			padding-bottom 0
+			border-bottom 0
+	&-summary
+		padding 0 15px
+		a
+			color $gray
+			display inline-block
+			font-size .9em
+			line-height 1.2em
+			transition all .2s ease
+			font-weight 400
+			cursor pointer
+			&:hover,
+			&:focus,
+			&:active
+				color $red
+		h4
+			line-height 1em
+			font-weight 400
+		h6
+			font-size .8em
+			color $red
+	@media screen and (max-width 800px)
+		&-article
+			width 50%
+			margin-right -2px
+			display inline-block
+			.box
+				&-8,
+				&-4
+					display table-cell
+				&-8
+					width 66.66%
+				&-4
+					width 33.33%
+	@media screen and (max-width 650px)
+		&-article
+			width 100%
+			margin-right 0
+			display block
+			.box
+				&-8,
+				&-4
+					display table-cell
+				&-8
+					width 66.66%
+				&-4
+					width 33.33%
+		
+
+.widget
+	&-red
+		background-color $red-dark
+		color $white
+		.newslatter
+			&-summary
+				a
+					color $white
+					&:hover,
+					&:focus,
+					&:active
+						color $red
+				h6
+					color $red
+				

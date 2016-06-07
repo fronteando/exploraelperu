@@ -1,5 +1,5 @@
 .banner
-	height 500px
+	height 400px
 	background-size cover
 	background-position center
 	background-repeat no-repeat
@@ -12,4 +12,52 @@
 		position absolute
 		bottom 0
 		left 0
-		
+		z-index 21
+	&in
+		height 300px
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+		position relative
+		&:before
+			content ''
+			background-image url(../images/banner/bg-before.png)
+			height 52px
+			width 100%
+			position absolute
+			bottom 0
+			left 0
+		&-table
+			display table
+			height 100%
+			position absolute
+			top 0
+			width 100%
+			&-center
+				display table-cell
+				vertical-align middle
+		&-title
+			display inline-block
+			color $white
+			h5
+				font-family RobotoC
+				font-size 1.9em
+				text-transform uppercase
+				font-weight 700
+				text-shadow 2px 2px 6px rgba($black,.7)
+			h6
+				font-size 1.3em
+				font-weight 300
+				position relative
+				top -5px
+				text-shadow 2px 2px 6px rgba($black,.7)
+	@media screen and (max-width 800px)
+		&in
+			margin-top 60px
+			height 180px
+			&-title
+				width 100%
+				margin-bottom 30px
+				h5,
+				h6
+					padding 0 15px

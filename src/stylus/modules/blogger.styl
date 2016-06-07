@@ -1,0 +1,42 @@
+.blogger
+	&-article
+		display table
+		width 100%
+		margin-bottom 25px
+		padding-bottom 25px
+		border-bottom 1px solid rgba($gray,.3)
+		&:last-child
+			border-bottom 0
+			margin-bottom 0
+			padding-bottom 0
+	&-figure
+		width 20%
+		min-width 150px
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+	&-details
+		padding 10px 0px 10px 15px
+		h4
+			text-transform uppercase
+			margin-bottom 10px
+		.btn
+			margin-top 15px
+			padding 5px 15px
+			font-size .9em
+	&-figure,
+	&-details
+		display table-cell
+		vertical-align top
+	@media screen and (max-width 350px)
+		&-figure,
+		&-details
+			display table
+			width 100%
+		&-figure
+			height 120px
+		&-details
+			padding 0
+			padding-top 15px
+			.btn
+				float right
