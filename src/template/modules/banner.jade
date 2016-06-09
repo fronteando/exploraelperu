@@ -1,4 +1,5 @@
-div(class="tp-banner")
+.rowbgimage_overlay(style="background-color: #fff;")
+//-div(class="tp-banner")
 	ul
 		// SLIDE
 		li(data-transition="fade" data-slotamount="5" data-masterspeed="700")
@@ -33,3 +34,39 @@ div(class="tp-banner")
 				| EXPLORA 
 				span EL PERÚ
 	// <div class="tp-bannertimer"></div>
+.tp-banner
+	div(id="slider1" class="rev_slider"  data-version="5.0")
+		ul
+			li(data-transition="fade")
+				// MAIN IMAGE
+
+				img(src="images/banner/banner-1.jpg"  alt=""  width="1920" height="1280")
+				// LAYER NR. 1
+				div(
+					class="tp-caption News-Title tp-resizeme rs-parallaxlevel-0"
+					data-x="left"
+					data-hoffset="80"
+					data-y="top"
+					data-voffset="450"
+					data-whitespace="normal"
+					data-transform_idle="o:1;"
+					data-transform_in="o:0"
+					data-transform_out="o:0"
+					data-start="500"
+				)
+					| DISCOVER THE WILD 
+ 
+			li(data-transition="fade")
+				// MAIN IMAGE
+				img(src="images/banner/banner-2.jpg"  alt=""  width="1920" height="1280")
+				// LAYER NR. 1
+				div(
+					class="tp-caption News-Title"
+					data-x="left" data-hoffset="80"
+					data-y="top" data-voffset="450"
+					data-whitespace="normal"
+					data-transform_idle="o:1;"
+					data-transform_in="o:0"
+					data-transform_out="o:0"
+					data-start="500"
+				) DISCOVER THE WILD

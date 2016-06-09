@@ -11037,7 +11037,7 @@ var frontrules = require('./vendor/frontrules')
 var validate = require('./vendor/validate')
 var carousel = require('./modules/carousel')
 var slider = require('./modules/slider')
-
+var map = require('./modules/map')
 
 
 /***************************************
@@ -11048,20 +11048,44 @@ $(function() {
 	carousel()
 	slider()
 	frontrules()
+	/*
+	 * mapa
+	 */
+	var contact = $('#contact-map')
+
+	if(contact.html() != undefined){
+		map()
+	}
 
 	/**
 	 * Banner section
 	 */
-	$('.tp-banner').revolution({
-		delay:5000,
-		startwidth:1170,
-		startwidth:400,
-		hideThumbs:10,
-		touchenabled:"on",
-		onHoverStop:"off"
+	$('#slider1').revolution({
+		sliderType:"standard",
+		sliderLayout:"fullwidth",
+		delay:3000,
+		spinner:'spiner0',
+		navigation: {
+			arrows:{
+				enable : true
+			},
+			touch:{
+				touchenabled:"on",
+				swipe_treshold : 75,
+				swipe_min_touches : 1,
+				drag_block_vertical:false,
+				swipe_direction:"horizontal"
+			}
+		},
+		responsiveLevels:[4096,1024,778,480],
+		gridwidth:[1140,800,750,480],
+		gridheight:[600,600,980,700],
+		gridwidth:1170,
+		gridheight:450,
+		minHeight:300
 	});
 })
-},{"./modules/carousel":3,"./modules/slider":4,"./vendor/dev":5,"./vendor/frontrules":6,"./vendor/validate":7,"jquery":1}],3:[function(require,module,exports){
+},{"./modules/carousel":3,"./modules/map":4,"./modules/slider":5,"./vendor/dev":6,"./vendor/frontrules":7,"./vendor/validate":8,"jquery":1}],3:[function(require,module,exports){
 var carousel = function() {
 	var owl = $('#tours-owl')
 
@@ -11159,6 +11183,34 @@ var carousel = function() {
 
 module.exports = carousel;
 },{}],4:[function(require,module,exports){
+var map = function() {
+	var locations = [
+		['<p class="marker-title">Portal Confituria Nro 257</p><p class="marker-paragraph">Plaza de Armas Cusco - Perú</p>', -13.516575,-71.979588, 'images/global/marker.png']
+	];
+
+	var map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
+
+	var infowindow = new google.maps.InfoWindow();
+	var markers = new Array();
+	var marker, i;
+
+	for (var i = 0; i < locations.length; i++) {
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+			map: map,
+			icon: locations[i][3]
+		});
+		markers.push(new google.maps.LatLng(locations[i][1], locations[i][2]));
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			return function() {
+				infowindow.setContent(locations[i][0]);
+				infowindow.open(map, marker);
+			}
+		})(marker, i));
+	};
+}
+module.exports = map;
+},{}],5:[function(require,module,exports){
 var slider = function() {
 	$('.toursin-gallery').flexslider({
 		animation: "slide",
@@ -11169,13 +11221,13 @@ var slider = function() {
 }
 
 module.exports = slider;
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 var developer = function() {
   var name = 'jimmy' 
   console.log('funciona ' + name)
 }
 module.exports = developer;
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 var frontrules = function() {
 	var navBar = $('#nav-bar')
 	var navLen = $('.lenguage-nav')
@@ -11221,7 +11273,7 @@ var frontrules = function() {
 	});
 }
 module.exports = frontrules;
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 var validate = function() {
 	$('#contract').validate({
 		rules: {

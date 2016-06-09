@@ -1,0 +1,16 @@
+section.widget-section
+	h3
+		| Ubícanos
+	//-.iframe-responsive
+		img(class="iframe-img" src="http://placehold.it/16x9")
+		iframe(src="http://www.youtube.com/embed/WsFWhL4Y84Y" frameborder="0" allowfullscreen)
+	#contact-map.contact-map
+
+		script(src="https://maps.google.com/maps/api/js?sensor=false")
+		script.
+			var punto = new google.maps.LatLng(-13.516575,-71.979588);
+			var mapOptions = {
+				center: punto,
+				zoom: 19,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};

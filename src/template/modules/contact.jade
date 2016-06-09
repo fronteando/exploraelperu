@@ -1,0 +1,59 @@
+.content
+	.box-top
+		.box-7
+			form(action="/" method="post")
+				.top-row
+					.field-wrap
+						label
+							| First Name
+							span.req *
+						input(type="text" required autocomplete="off")
+					.field-wrap
+						label
+							| First Name
+							span.req *
+						input(type="text" required autocomplete="off")
+					.field-wrap
+						label
+							| First Name
+							span.req *
+						input(type="text" required autocomplete="off")
+					.field-wrap
+						label
+							| First Name
+							span.req *
+						input(type="text" required autocomplete="off")
+
+					button(type="submit" class="button button-block") Enviar
+
+			//-.form
+				form(role="form" class="form-contact")
+					.box-6
+						div(class="form-group")
+							label(for="name") Nombre:
+							.form-control
+								input(type="text" class="form-input" id="name")
+					.box-6
+						div(class="form-group")
+							label(for="lastname") Apellido:
+							.form-control
+								input(type="text" class="form-input" id="lastname")
+					.box-6
+						div(class="form-group")
+							label(for="phone") Teléfono:
+							.form-control
+								input(type="text" class="form-input" id="phone")
+					.box-6
+						div(class="form-group")
+							label(for="mail") Correo:
+							.form-control
+								input(type="text" class="form-input" id="mail")
+					.box-12
+						div(class="form-group")
+							label(for="text") Mensaje:
+							.form-control
+								textarea(type="text" class="form-input" id="text")
+					a(href="#" class="btn btn-red") ENVIAR
+		.box-5
+			.widget
+				include contactus
