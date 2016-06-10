@@ -82,6 +82,9 @@ p
 .btn
 	display inline-block
 	text-align center
+	border 0
+	outline none
+	cursor pointer
 	&-red
 		background-color $red
 		color $white
@@ -178,6 +181,22 @@ p
 .contact
 	&-map
 		height 400px
+	&-text
+		margin-bottom 35px
+		h2
+			text-transform uppercase
+			font-size 1.3em
+			span
+				font-weight 400
+		p
+			text-align justify
+	@media screen and (max-width 800px)
+		&-text
+			padding 0
+			text-align center
+			p
+				text-align center
+	
 
 /*
  * Iframe video
@@ -194,3 +213,21 @@ p
 		left 0
 		width 100%
 		height 100%
+		
+/*
+ * Form
+ */
+label
+	color $gray
+	.req
+		color $red
+	&.active
+		color $red
+		
+.form
+	&-content
+		margin 0 15px
+		background-color rgba($gray,.2)
+		> article
+			padding-bottom 15px
+			border-bottom 1px solid

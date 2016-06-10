@@ -1,59 +1,47 @@
 .content
 	.box-top
 		.box-7
-			form(action="/" method="post")
-				.top-row
-					.field-wrap
-						label
-							| First Name
-							span.req *
-						input(type="text" required autocomplete="off")
-					.field-wrap
-						label
-							| First Name
-							span.req *
-						input(type="text" required autocomplete="off")
-					.field-wrap
-						label
-							| First Name
-							span.req *
-						input(type="text" required autocomplete="off")
-					.field-wrap
-						label
-							| First Name
-							span.req *
-						input(type="text" required autocomplete="off")
+			.contact-text
+				h2
+					| ¿Tienes alguna duda? 
+					span Por favor llena el formulario
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eius, nostrum, repellat cumque laudantium voluptatem excepturi? Porro, ipsum necessitatibus, vero sapiente obcaecati nam. Iure veritatis doloremque reprehenderit dicta, excepturi dolorem.
+			.form
+				.tab-content
+					#signup  
+						form(action="/" method="post")
+							.top-row
+								.field-wrap
+									label
+										| Nombre
+										span.req *
+									input(type="text" required autocomplete="off")
+						
+								.field-wrap
+									label
+										Last
+											| Apellido
+											span.req *
+									input(type="text" required autocomplete="off")
 
-					button(type="submit" class="button button-block") Enviar
+							.field-wrap
+								label
+									| Email
+									span.req *
+								input(type="text" required autocomplete="off")
 
-			//-.form
-				form(role="form" class="form-contact")
-					.box-6
-						div(class="form-group")
-							label(for="name") Nombre:
-							.form-control
-								input(type="text" class="form-input" id="name")
-					.box-6
-						div(class="form-group")
-							label(for="lastname") Apellido:
-							.form-control
-								input(type="text" class="form-input" id="lastname")
-					.box-6
-						div(class="form-group")
-							label(for="phone") Teléfono:
-							.form-control
-								input(type="text" class="form-input" id="phone")
-					.box-6
-						div(class="form-group")
-							label(for="mail") Correo:
-							.form-control
-								input(type="text" class="form-input" id="mail")
-					.box-12
-						div(class="form-group")
-							label(for="text") Mensaje:
-							.form-control
-								textarea(type="text" class="form-input" id="text")
-					a(href="#" class="btn btn-red") ENVIAR
+							.field-wrap
+								label
+									| Asunto
+									span.req *
+								input(type="text" required autocomplete="off")
+							.field-wrap
+								label.textarea
+									| Mensaje
+									span.req *
+								textarea(type="textarea" required autocomplete="off")
+							button(type="submit" class="btn btn-red") Enviar Consulta
+
 		.box-5
 			.widget
 				include contactus

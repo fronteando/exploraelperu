@@ -1,0 +1,87 @@
+include base/head
+body
+	include modules/headerin
+	section.section-row#proccesuno
+		.content
+			form.form-pay(action="/" method="post")
+				.box-top
+					.box-4
+						.form-content
+							.form-box
+								.box-3
+									label(for="name")
+										| Nombre
+										span.req *
+								.box-9
+									input(type="text" id="name")
+							.form-box
+								.box-3
+									label(for="lastname")
+										| Apellidos
+										span.req *
+								.box-9
+									input(type="text" id="lastname")
+							.form-box
+								.box-3
+									label(for="phone")
+										| Teléfono
+										span.req *
+								.box-9
+									input(type="text" id="phone")
+							.form-box
+								.box-3
+									label(for="email")
+										| Correo
+										span.req *
+								.box-9
+									input(type="text" id="email")
+							.form-box
+								.box-3
+									label(for="identity")
+										| DNI / CE
+										span.req *
+								.box-9
+									input(type="text" id="identity")
+					.box-4
+						.form-content
+							.cc-selector-2
+								input(type="radio" id="paypaypal" name="payreserved" value="Paypal")
+								label(for="paypaypal") Paypal
+								input(type="radio" id="paywesterunion" name="payreserved" value="Wester Union")
+								label(for="paywesterunion") Wester Union
+								input(type="radio" id="paybcp" name="payreserved" value="BCP")
+								label(for="paybcp") BCP
+					.box-4
+						.form-content
+							article.newslatter-article
+								.box-top
+									.box-4
+										.newslatter-img
+											figure.newslatter-figure
+												img(src="images/destinos/destino1.png" class="img-responsive")
+									.box-8
+										.newslatter-summary
+											a(href="/destinosin.html") Conoce como viajar a Cusco y sobrivir para contarlo 1
+											h6 02 días / 01 noche
+							.form-box
+								.box-3
+									label(for="cantidad")
+										| Cantidad
+								.box-9
+									input(type="text" id="cantidad")
+							.form-box
+								.box-3
+									label(for="cupon")
+										| Cupon
+								.box-9
+									input(type="text" id="cupon")
+							article.price
+								h2
+									| Subtotal Precio: 
+									span S/. 400
+								h2
+									| Precio Total: 
+									span S/. 400
+							button(type="submit" class="btn btn-red") Enviar Consulta
+	footer.footer
+		include base/footer

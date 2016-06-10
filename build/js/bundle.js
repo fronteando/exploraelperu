@@ -11038,6 +11038,7 @@ var validate = require('./vendor/validate')
 var carousel = require('./modules/carousel')
 var slider = require('./modules/slider')
 var map = require('./modules/map')
+var formcss = require('./vendor/formcss')
 
 
 /***************************************
@@ -11046,6 +11047,7 @@ var map = require('./modules/map')
 $(function() {
 	developer('web')
 	carousel()
+	formcss()
 	slider()
 	frontrules()
 	/*
@@ -11085,7 +11087,7 @@ $(function() {
 		minHeight:300
 	});
 })
-},{"./modules/carousel":3,"./modules/map":4,"./modules/slider":5,"./vendor/dev":6,"./vendor/frontrules":7,"./vendor/validate":8,"jquery":1}],3:[function(require,module,exports){
+},{"./modules/carousel":3,"./modules/map":4,"./modules/slider":5,"./vendor/dev":6,"./vendor/formcss":7,"./vendor/frontrules":8,"./vendor/validate":9,"jquery":1}],3:[function(require,module,exports){
 var carousel = function() {
 	var owl = $('#tours-owl')
 
@@ -11228,6 +11230,38 @@ var developer = function() {
 }
 module.exports = developer;
 },{}],7:[function(require,module,exports){
+var formcss = function() {
+
+	$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+		var $this = $(this),
+				label = $this.prev('label');
+
+			if (e.type === 'keyup') {
+				if ($this.val() === '') {
+						label.removeClass('active highlight');
+					} else {
+						label.addClass('active highlight');
+					}
+			} else if (e.type === 'blur') {
+				if( $this.val() === '' ) {
+					label.removeClass('active highlight'); 
+				} else {
+					label.removeClass('highlight');   
+				}   
+			} else if (e.type === 'focus') {
+				
+				if( $this.val() === '' ) {
+					label.removeClass('highlight'); 
+				} 
+				else if( $this.val() !== '' ) {
+					label.addClass('highlight');
+				}
+			}
+
+	});
+}
+module.exports = formcss;
+},{}],8:[function(require,module,exports){
 var frontrules = function() {
 	var navBar = $('#nav-bar')
 	var navLen = $('.lenguage-nav')
@@ -11273,7 +11307,7 @@ var frontrules = function() {
 	});
 }
 module.exports = frontrules;
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 var validate = function() {
 	$('#contract').validate({
 		rules: {

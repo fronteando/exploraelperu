@@ -9,6 +9,7 @@ var validate = require('./vendor/validate')
 var carousel = require('./modules/carousel')
 var slider = require('./modules/slider')
 var map = require('./modules/map')
+var formcss = require('./vendor/formcss')
 
 
 /***************************************
@@ -17,6 +18,7 @@ var map = require('./modules/map')
 $(function() {
 	developer('web')
 	carousel()
+	formcss()
 	slider()
 	frontrules()
 	/*

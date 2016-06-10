@@ -1,28 +1,88 @@
-.form
-	&-contact
-		.box
-			&-6
-				&:nth-of-type(2n)
-					.form
-						&-group
-							padding-right 0
-				&:nth-of-type(2n+1)
-					.form
-						&-group
-							padding-left 0
-			&-12
-				.form
-					&-group
-						padding 0
-	&-group
-		padding 0 10px
-		label
-			display block
-		input,
-		textarea
-			width 100%
-	&-control
-		min-height 2em
+/*.form
+	padding 0 15px
+	@media screen and (max-width 800px)
 		padding 0
-		border 0
-		box-shadow inset 0 0 1px #000000
+label
+	position absolute
+	transform translateY(10px)
+	left 13px
+	color rgba(255, 255, 255, 0.5)
+	transition all 0.25s ease
+	-webkit-backface-visibility hidden
+	pointer-events none
+	font-size 16px
+	.req 
+		margin 2px
+	&.active 
+		transform translateY(50px)
+		left 2px
+		font-size 14px
+	&.textarea
+		&.active 
+			transform translateY(70px)
+			left 2px
+			font-size 14px
+label
+	&.active
+		.req 
+			opacity 0
+
+label.highlight 
+	color #ffffff
+
+input,
+textarea 
+	font-size 16px
+	display block
+	width 100%
+	height 100%
+	padding 10px
+	background none
+	background-image none
+	border 1px solid #a0b3b0
+	color #ffffff
+	border-radius 0
+	transition border-color .25s ease, box-shadow .25s ease
+	&:focus
+		outline 0
+
+textarea
+	resize vertical
+
+.field-wrap 
+	position relative
+	margin-bottom 40px
+	display flex
+
+.top-row
+	&:after 
+		content ""
+		display table
+		clear both
+	> div 
+		float left
+		width 48%
+		margin-right 4%
+		display inline-flex
+		&:last-child 
+			margin 0
+
+.forgot 
+	margin-top -20px
+	text-align right
+*/
+.form
+	&-box
+		margin-bottom 10px
+		&:last-child
+			margin-bottom 0
+	&-content
+		padding 15px 15px
+
+input,
+textarea
+	border 1px solid
+	border-radius 4px
+	box-sizing border-box
+	padding 5px 10px
+	width 100%
