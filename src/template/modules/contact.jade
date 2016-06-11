@@ -10,36 +10,33 @@
 				.tab-content
 					#signup  
 						form(action="/" method="post")
-							.top-row
-								.field-wrap
-									label
-										| Nombre
+							.form-box
+								label(for="name")
+									| Nombre
+									span.req *
+								input(type="text" id="name" class="form-input" name="name")
+							.form-box
+								label(for="lastname")
+									Last
+										| Apellido
 										span.req *
-									input(type="text" required autocomplete="off")
-						
-								.field-wrap
-									label
-										Last
-											| Apellido
-											span.req *
-									input(type="text" required autocomplete="off")
-
-							.field-wrap
-								label
+								input(type="text" id="lastname" class="form-input" name="lastname")
+							.form-box
+								label(for="email")
 									| Email
 									span.req *
-								input(type="text" required autocomplete="off")
+								input(type="text" id="email" class="form-input" name="email")
 
-							.field-wrap
-								label
+							.form-box
+								label(for="subject")
 									| Asunto
 									span.req *
-								input(type="text" required autocomplete="off")
-							.field-wrap
-								label.textarea
+								input(type="text" id="subject" class="form-input" name="subject")
+							.form-box
+								label.textarea(for="message")
 									| Mensaje
 									span.req *
-								textarea(type="textarea" required autocomplete="off")
+								textarea(type="textarea" id="message" class="form-input" name="message")
 							button(type="submit" class="btn btn-red") Enviar Consulta
 
 		.box-5

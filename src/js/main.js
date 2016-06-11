@@ -55,6 +55,6 @@ $(function() {
 		gridheight:[600,600,980,700],
 		gridwidth:1170,
 		gridheight:450,
-		minHeight:300
+		minHeight:250
 	});
 })

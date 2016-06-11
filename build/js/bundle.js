@@ -11084,7 +11084,7 @@ $(function() {
 		gridheight:[600,600,980,700],
 		gridwidth:1170,
 		gridheight:450,
-		minHeight:300
+		minHeight:250
 	});
 })
 },{"./modules/carousel":3,"./modules/map":4,"./modules/slider":5,"./vendor/dev":6,"./vendor/formcss":7,"./vendor/frontrules":8,"./vendor/validate":9,"jquery":1}],3:[function(require,module,exports){

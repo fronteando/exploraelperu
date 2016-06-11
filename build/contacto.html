@@ -100,29 +100,27 @@
             <div class="tab-content">
               <div id="signup"> 
                 <form action="/" method="post">
-                  <div class="top-row">
-                    <div class="field-wrap">
-                      <label>Nombre<span class="req">*</span></label>
-                      <input type="text" required autocomplete="off">
-                    </div>
-                    <div class="field-wrap">
-                      <label>
-                        <Last>Apellido<span class="req">*</span></Last>
-                      </label>
-                      <input type="text" required autocomplete="off">
-                    </div>
+                  <div class="form-box">
+                    <label for="name">Nombre<span class="req">*</span></label>
+                    <input type="text" id="name" name="name" class="form-input">
                   </div>
-                  <div class="field-wrap">
-                    <label>Email<span class="req">*</span></label>
-                    <input type="text" required autocomplete="off">
+                  <div class="form-box">
+                    <label for="lastname">
+                      <Last>Apellido<span class="req">*</span></Last>
+                    </label>
+                    <input type="text" id="lastname" name="lastname" class="form-input">
                   </div>
-                  <div class="field-wrap">
-                    <label>Asunto<span class="req">*</span></label>
-                    <input type="text" required autocomplete="off">
+                  <div class="form-box">
+                    <label for="email">Email<span class="req">*</span></label>
+                    <input type="text" id="email" name="email" class="form-input">
                   </div>
-                  <div class="field-wrap">
-                    <label class="textarea">Mensaje<span class="req">*</span></label>
-                    <textarea type="textarea" required autocomplete="off"></textarea>
+                  <div class="form-box">
+                    <label for="subject">Asunto<span class="req">*</span></label>
+                    <input type="text" id="subject" name="subject" class="form-input">
+                  </div>
+                  <div class="form-box">
+                    <label for="message" class="textarea">Mensaje<span class="req">*</span></label>
+                    <textarea type="textarea" id="message" name="message" class="form-input"></textarea>
                   </div>
                   <button type="submit" class="btn btn-red">Enviar Consulta</button>
                 </form>

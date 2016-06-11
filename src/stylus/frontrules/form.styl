@@ -71,6 +71,8 @@ textarea
 	margin-top -20px
 	text-align right
 */
+
+
 .form
 	&-box
 		margin-bottom 10px
@@ -86,3 +88,16 @@ textarea
 	box-sizing border-box
 	padding 5px 10px
 	width 100%
+textarea
+	resize vertical
+
+input[type=text],
+textarea
+	transition all 0.30s ease-in-out
+	outline none
+	margin 5px 1px 3px 0px
+	border 1px solid #DDDDDD
+	&:focus
+		box-shadow 0 0 5px rgba(81, 203, 238, 1)
+		margin 5px 1px 3px 0px
+		border 1px solid rgba(81, 203, 238, 1)
