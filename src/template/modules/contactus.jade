@@ -11,6 +11,10 @@ section.widget-section
 			var punto = new google.maps.LatLng(-13.516575,-71.979588);
 			var mapOptions = {
 				center: punto,
-				zoom: 19,
+				zoom: 18,
+				zoomControl: false,
+				scaleControl: false,
+				scrollwheel: false,
+				disableDoubleClickZoom: true,
 				mapTypeId: google.maps.MapTypeId.ROADMAP
 			};

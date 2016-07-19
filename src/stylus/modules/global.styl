@@ -75,6 +75,7 @@ p
 			color $white
 			display table-cell
 			vertical-align middle
+			cursor pointer
 
 /*
  * btn
@@ -220,14 +221,28 @@ p
 label
 	color $gray
 	.req
-		color $red
+		color $gray
 	&.active
 		color $red
 		
 .form
 	&-content
 		margin 0 15px
-		background-color rgba($gray,.2)
+		background-color rgba(243, 243, 243, 0.2)
+		border-radius 5px
+		border 1px solid rgba(208,208,208,1)
 		> article
 			padding-bottom 15px
 			border-bottom 1px solid
+	&-title
+		background-color rgba($gray-dark,1)
+		color $white
+		margin-bottom 15px
+		margin-left 15px
+		margin-right 15px
+		padding 10px 15px
+		h4
+			font-weight 400
+	@media screen and (max-width 800px)
+		&-content
+			margin 0

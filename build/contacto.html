@@ -94,7 +94,6 @@
         <div class="box-7">
           <div class="contact-text">
             <h2>¿Tienes alguna duda? <span>Por favor llena el formulario</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum eius, nostrum, repellat cumque laudantium voluptatem excepturi? Porro, ipsum necessitatibus, vero sapiente obcaecati nam. Iure veritatis doloremque reprehenderit dicta, excepturi dolorem.</p>
           </div>
           <div class="form">
             <div class="tab-content">
@@ -138,7 +137,11 @@
                   var punto = new google.maps.LatLng(-13.516575,-71.979588);
                   var mapOptions = {
                   	center: punto,
-                  	zoom: 19,
+                  	zoom: 18,
+                  	zoomControl: false,
+                  	scaleControl: false,
+                  	scrollwheel: false,
+                  	disableDoubleClickZoom: true,
                   	mapTypeId: google.maps.MapTypeId.ROADMAP
                   };
                 </script>
